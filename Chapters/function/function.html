@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Cricket Game </title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Cricket Game </h1>
+  <h2>BAT   Boll  Stamp </h2>
+  <button onclick=" 
+  // console.log('You will be choosen in Bat ')
+
+  generateChoice()
+
+  let result;
+  if(computerChoise === 'Boll'){
+    result='You Won'
+  }
+  else if(computerChoise === 'Bat'){
+    result='Match is Tie'
+  }
+  else{
+    result='You Lost'
+  }
+  alert( `You choosen Bat   Computer choosen ${computerChoise} and ${result}`)
+
+
+  "> Bat </button>
+
+
+
+
+
+
+<button onclick=" 
+generateChoice()
+if(computerChoise === 'Boll'){
+  result='Match is Tie'
+}
+else if(computerChoise === 'Bat'){
+  result='You Won'
+}
+else{
+  result='You Lost'
+}
+alert( `You choosen Boll   Computer choosen is ${computerChoise} and ${result}`)
+
+
+"> Boll </button>
+ 
+
+
+ <button onclick=" 
+ generateChoice()
+ if(computerChoise === 'Boll'){
+   result='You lost'
+ }
+ else if(computerChoise === 'Bat'){
+   result='You won'
+ }
+ else{
+   result='Match Tie'
+ }
+ alert( `You chossen Stump   Computer choosen is ${computerChoise} and ${result}`)
+ 
+ 
+ "> Stamp </button>
+ 
+ <script>
+  let computerChoise;
+  function generateChoice(){
+    randomNumber=Math.random()*3;
+    if (randomNumber>0 && randomNumber<=1){
+      computerChoise='Bat';
+     
+    }
+    else if(randomNumber>1 && randomNumber<=2){
+      computerChoise='Boll';
+      
+    }
+
+    else{
+      computerChoise='Stamp';
+      
+    }
+
+
+
+  }
+ </script>
+
+
+
+
+  
+</body>
+</html>
