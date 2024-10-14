@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>DAte and Time </title>
+
+  <style>
+    #my-button{
+
+      height: 50px;
+      width: 50px;
+      font-size: 25px;
+      border-radius: 5px;
+
+    }
+
+    .odd{
+      background-color: blue;
+
+    }
+
+    .even{
+      background-color: chartreuse;
+    }
+
+
+  </style>
+</head>
+<body>
+  <h1 id="greet"></h1>
+  <button id="my-button" onclick="buttonPrass()"></button>
+
+  <script>  
+
+
+
+let noOfPressed=0;
+function buttonPrass(){
+
+  noOfPressed++;
+  console.log('I am Pressed')
+  updateButton();
+}
+
+updateButton();
+
+
+
+
+
+function doGreet(personName='Dear'){
+
+  let date= new Date();
+
+  let hours= date.getHours();
+  console.log(hours);
+
+  let heading=document.querySelector('#greet')
+  if(hours>5 && hours<12){
+  heading.innerText=`Good Morning ${personName}` ;
+  }
+  else if(hours>12 && hours<15){
+  heading.innerText=`Good Evening ${personName}`;
+  }
+  else{
+  heading.innerText=`Good Night  ${personName}`;
+  }
+}
+doGreet('Sagar')
+
+
+
+function updateButton(){
+
+  let button = document.querySelector('#my-button');
+
+  if(noOfPressed%2===0){
+    button.classList.remove('odd');
+    button.classList.add('even');
+  }
+  else{
+    button.classList.remove('even');
+    button.classList.add('odd')
+  } 
+  button.innerText=noOfPressed;
+
+
+}
+
+  </script>
+  
+</body>
+</html>

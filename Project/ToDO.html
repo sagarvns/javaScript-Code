@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo App </title>
+  <style>
+  .body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+    #main-heading{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-heading">  ToDo App </h1>
+
+  <input type="text" id="todo-input" placeholder="Enter the toDo ">
+  <button onclick="toDoAdd();">Add</button>
+
+  <p1 id="todo-itams"></p1>
+
+  <script>
+
+    let toDoList=[];
+    displayItam();
+
+    function toDoAdd(){
+      let inputElement=document.querySelector('#todo-input');
+      let toDoItem=inputElement.value;
+      toDoList.push(toDoItem)
+      inputElement.value='';
+      displayItam();
+    }
+
+    function displayItam(){
+      let displayElement=document.querySelector('#todo-itams');
+      displayElement.innerText = '';
+      for(let i=0;i<toDoList.length;i++){
+        displayElement.innerText = displayElement.innerText+"\n" + toDoList[i];
+      }
+    }
+
+    
+
+  </script>
+</body>
+</html>

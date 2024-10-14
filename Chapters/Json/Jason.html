@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Json</title>
+</head>
+<body>
+
+  
+
+  <!-- 
+    let product={
+
+      name:'Shirt',
+      price:99,
+      company:'Puma',
+      size:'XXl',
+      rating:{
+        star:4.5,
+        noOfStar:555,
+      }
+
+    };
+ console.log(product);
+
+ let str=JSON.stringify(product);
+ console.log(str)
+
+
+ let newstr=JSON.parse(str);
+ console.log(typeof(newstr));
+ console.log(newstr)
+
+localStorage.setItem('Name','KG Coding')
+localStorage.setItem('sagar','chauhan') -->
+
+<script>
+
+console.log(localStorage.getItem('sagar'))
+
+
+    let product= {
+
+      name:'Shirt',
+      price:99,
+      company:'Puma',
+      size:'XXl',
+      rating:{
+        star:4.5,
+        noOfStar:555,
+      }
+    }
+
+
+    // localStorage.setItem('product',JSON.stringify(product));
+    // console.log(localStorage.getItem('product'));
+
+
+    // let product2= (JSON.parse(localStorage.getItem('product')));
+    // console.log(product2);
+
+    localStorage.removeItem('Name');
+     localStorage.clear();
+
+
+  </script>
+  
+</body>
+</html>

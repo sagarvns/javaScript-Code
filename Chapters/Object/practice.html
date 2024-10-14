@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title> Object </title>
+</head>
+<body>
+  <script>
+//Creare object from Mantra Bag 
+
+let mayntraBag = {
+  name:'Shirt',
+  price:999,
+  company:'Puma',
+  size:'XLL',
+  'delivery-Time':'On-Time-Delivery',
+
+};
+console.log(mayntraBag);
+console.log(typeof(mayntraBag));
+
+let copyMayntraBag=mayntraBag;
+
+  copyMayntraBag.size='M'
+
+  console.log(copyMayntraBag);
+
+  console.log(mayntraBag['delivery-Time'])
+
+
+let obj={
+
+  massage:'Good Job',
+  status:'Complete',
+};
+
+console.log(obj);
+
+let {massage, status}=obj;
+
+console.log(massage);
+console.log(status);
+
+
+
+
+  </script>
+  
+</body>
+</html>

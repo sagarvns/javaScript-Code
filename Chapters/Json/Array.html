@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array </title>
+</head>
+<body>
+
+  <script>
+
+let arr=[1,4,3,5,7,8]
+let squ=[]
+for(let i=0;i<arr.length;i++){
+  squ[i]=arr[i]*arr[i];
+}
+console.log(squ)
+
+
+let sum=0
+for(let i=0;i<arr.length;i++){
+  sum=sum+arr[i];
+
+}
+console.log(sum)
+
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i]===89){
+    console.log(`Number is found in Index in that place ${i}`)
+    break;
+  }
+  else{
+    console.log(" Number is Not Found ")
+  }
+}
+  </script>
+  
+</body>
+</html>
